@@ -1,66 +1,39 @@
 let userNumber = +prompt('enter your number','');
 
-let numFib1 = 1;
-let numFib2 = 1;
-let numFib3;
 
-function getFibanacciNum(userNumber) {
+// function fibonacciLoop(userNumber) {
     
-for (let i = 3; i <= userNumber; i++) {
-    numFib3 = numFib1 + numFib2;
-    numFib1 = numFib2;
-    numFib2 = numFib3;
-   
-}
-    return numFib2;
-}
+//     let numFib1 = 1;
+//     let numFib2 = 1;
+//     for (let i = 3; i <= userNumber; i++) {
+//         [numFib1, numFib2] = [numFib2, numFib1 + numFib2];
+//     }
+//     return document.write('Loop method : ' + numFib2 + '<br>');
+// }
+// fibonacciLoop(userNumber);
 
-document.write('Under number ' + '<b>' + userNumber + '</b>' + 
-' the number of Fibonacci will be : ' + getFibanacciNum(userNumber) + `<br>`);
+function fibonacciRecursion(userNumber) {
 
-
-function fibNumber(userNumber) {
-
-    if(userNumber <= 1 || userNumber >= 40) {
+    if(userNumber <= 1 || userNumber >= 41) {
       return userNumber;
     } else {
-      return fibNumber(userNumber - 1) + fibNumber(userNumber - 2);        
+      return fibonacciRecursion(userNumber - 1) + fibonacciRecursion(userNumber - 2);
     }
 }
+document.write(`Recursion method : ` + fibonacciRecursion(userNumber) + '<br>');
 
-document.write(`recurcia method : ` + fibNumber(userNumber));
-
-
-
-
-// function fibonacciNum(userNumber) {
-//     let fibo = [1, 1];
+// function fibonacciArrey(userNumber){
     
-//     for (let i = 0; i < userNumber; i++) {
-//         fibo.push(fibo[i - 1] + fibo[i - 2]);
-        
+//     let arrey = [1, 1];
+//     let i = 3;
+//     let answer;
+//     for (i; i <= userNumber; i++) {
+//         arrey[2] = arrey[0] + arrey[1];
+//         arrey[0] = arrey[1];
+//         arrey[1] = arrey[2];
 //     }
-//     return fibo.pop();
+//     answer = document.write('Arrey method : ' + arrey.pop());
+//     return answer;
 // }
-
-// document.write(fibonacciNum());
-
-
-
-
-//  function fibonacci(n) {
-//      let array = [1, 1, 2];
-
-//      for (let i = 3; i < n; i++) {
-       
-//          array[0] = array[1];
-//          array[1] = array[2];
-//          array[2] = array[0] + array[1];
-        
-//      }
-
-//      return array[2];
-//  }
-
-//  document.write(fibonacci(n));
+// fibonacciArrey(userNumber);
 
