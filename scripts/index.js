@@ -22,18 +22,18 @@ function fibonacciRecursion(userNumber) {
 }
 document.write(`Recursion method : ` + fibonacciRecursion(userNumber) + '<br>');
 
-// function fibonacciArrey(userNumber){
+// function fibonacciArray(userNumber){
     
-//     let arrey = [1, 1];
+//     let array = [1, 1];
 //     let i = 3;
 //     let answer;
 //     for (i; i <= userNumber; i++) {
-//         arrey[2] = arrey[0] + arrey[1];
-//         arrey[0] = arrey[1];
-//         arrey[1] = arrey[2];
+//         array[2] = array[0] + arrey[1];
+//         array[0] = array[1];
+//         array[1] = array[2];
 //     }
-//     answer = document.write('Arrey method : ' + arrey.pop());
+//     answer = document.write('Array method : ' + array.pop());
 //     return answer;
 // }
-// fibonacciArrey(userNumber);
+// fibonacciArray(userNumber);
 
